@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="logo.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="logoo">
+        <a  href="#">
+            <div class="logo ">
+              <div class="image-Logo"></div>
+              <div class="brand">
+                <h1>7COLORS</h1>
+                <h1>7COLORS</h1>
+              </div>
+            </div>
+          </a>
+    </div>
+    
+    <div class="adcontainer">
+        
+        <div class="adleft">
+            <a href="#" id="uploadfunc" style="text-decoration: none;"  onclick="apUploadform()">Upload</a>
+            <a href="#" id="managefunc" style="text-decoration: none;" onclick="apManageform()">Manage</a>
+            <a href="#" id="orderfunc" style="text-decoration: none;" onclick="apOrderform()">Order</a>
+            <div class="footerright">
+                <p style="color: rgb(53, 38, 17);"> © 2020 Copyright: HTHK.com</p>
+            </div>
+        </div>
+
+        <div id="uploading" class="uploadin">
+            <h2 class="myclass">UPLOADING FISH</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <tr class="form-group">
+                    <label>ID</label>
+                    <input type="text" class="form-control" name="id" placeholder="Enter id">
+                </tr>
+                <div class="form-group">
+                    <br>
+                    <label>Fish Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter price">
+                </div>
+
+                <div class="form-group">
+                    <label>Photo</label> <br />
+                    <input type="file" class="form-control" name="photo" placeholder="Enter photo">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="reset" class="btn btn-primary">Cancel</button>
+            </form>
+        </div>
+
+        <div id="managing" class="managin">
+            <h2>LIST INFORMATION OF FISH</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>ID</th>
+                        <th>Fish Name</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td width="100"><img src="#" alt="Image" width="80" height="70" /></td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="#">Edit</a> |
+                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100"><img src="#" alt="Image" width="80" height="70" /></td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="#">Edit</a> |
+                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100"><img src="#" alt="Image" width="80" height="70" /></td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="#">Edit</a> |
+                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100"><img src="#" alt="Image" width="80" height="70" /></td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="#">Edit</a> |
+                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="ordering" class="orderin">
+            <h2>LIST ORDER</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>ID</th>
+                        <th>Fish Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Address</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>PD01</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                    </tr>
+                    <tr>
+                        <td>PD01</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                    </tr>
+                    <tr>
+                        <td>PD01</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                    </tr>
+                    <tr>
+                        <td>PD01</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                        <td>Namnv</td>
+                        <td>PD01</td>
+                        <td>Namnv</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script src="handleform.js"></script>
+</body>
+
+</html>

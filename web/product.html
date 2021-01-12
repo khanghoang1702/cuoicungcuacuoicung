@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Aquarium Store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" />
+    <link rel="stylesheet" href="CSS/logo.css" />
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/about.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="banner-bg">
+
+        </div>
+
+        <div class="h-container">
+            <div class="h-left">
+                <ul>
+                    <li><a href="#">Log in/Log out</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="h-right">
+                <span><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+                <span><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+                <span><a href="#"><i class="fab fa-instagram-square"></i></a></span>
+            </div>
+        </div>
+        <div class="h-banner">
+
+            <div class="banner-content">
+                <h1></h1>
+                <a class="" href="#navigation"><button class="btnToProducts">DISCOVER</button></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-xl navbar-light  sticky-top pr-1" style="background-color: #a8dbff" id="navigation"
+        ;>
+        <a class="navbar-brand " href="#">
+            <div class="logo ">
+                <div class="image-Logo"></div>
+                <div class="brand">
+                    <h1>7COLORS</h1>
+                    <h1>7COLORS</h1>
+                </div>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AQUATIC KNOWLEDGE
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Fish</a>
+                        <a class="dropdown-item" href="#">Shrimp</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Turtle</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AQUATIC ACCESSORIES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Fish</a>
+                        <a class="dropdown-item" href="#">Shrimp</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#">Turtle</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FISHTANK SAMPLE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li> -->
+
+                <!-- <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li> -->
+            </ul>
+            <form class="form-inline searchbar  my-2 my-lg-0 mr-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+    </nav>
+    <div class="row contents">
+
+        <!-- <div class="col-2 mt-2 filter">
+            <div class="category">
+                <div class="  text-info text-uppercase">
+                    <i class="fa fa-list"></i> Categories
+                </div>
+                <div class="list-group list-category" id="list-tab" role="tablist">
+                    <a class=" category-item" id="list-home-list" data-toggle="list" href="#list-home" role="tab"
+                        aria-controls="home">Betta Fish</a>
+                    <a class=" category-item" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab"
+                        aria-controls="profile">Freshwater Fish</a>
+                    <a class="category-item" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab"
+                        aria-controls="messages">Invertebrates</a>
+                    <a class=" category-item" id="list-settings-list" data-toggle="list" href="#list-settings"
+                        role="tab" aria-controls="settings">Pond Fish</a>
+                    <a class=" category-item" id="list-settings-list" data-toggle="list" href="#list-settings"
+                        role="tab" aria-controls="settings">Saltwater Fish</a>
+
+                </div>
+                </ul>
+            </div>
+            <div class="category">
+                <div class=" text-info text-uppercase category-tag">
+                    <label for="">
+                        <i class="fa fa-list"></i> Price
+                    </label>
+
+                    <i class="fa fa-plus icon">
+
+                        <div class="list-group list-category" id="list-tab" role="tablist">
+                            <label for="primary" class="btn btn-primary category-checkbox"> <input type="checkbox"
+                                    id="primary"> Less than $10</label>
+                            <label for="info" class="btn btn-info category-checkbox"> <input type="checkbox" id="info">
+                                $10 to $25</label>
+                            <label for="success" class="btn btn-success category-checkbox"><input type="checkbox"
+                                    id="success"> $25 to $50</label>
+                            <label for="warning" class="btn btn-warning category-checkbox"> <input type="checkbox"
+                                    id="warning"> $50 to $100</label>
+                            <label for="danger" class="btn btn-danger category-checkbox"><input type="checkbox"
+                                    id="danger"> More than $100 </label>
+                        </div>
+                    </i>
+
+                </div>
+
+                </ul>
+            </div>
+            <div class="category">
+                <div class="text-info text-uppercase category-tag">
+                    <label for=""><i class="fa fa-list"></i> Brand</label> <a><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="list-group list-category" id="list-tab" role="tablist">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search this blog">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <label for="" class="category-checkbox"> <input type="checkbox" id=""> Less than $10</label>
+                    <label for="" class=" category-checkbox"> <input type="checkbox" id=""> $10 to $25</label>
+                    <label for="" class="category-checkbox"><input type="checkbox" id=""> $25 to $50</label>
+                    <label for="" class="category-checkbox"> <input type="checkbox" id=""> $50 to $100</label>
+                    <label for="" class=" category-checkbox"><input type="checkbox" id=""> More than $100 </label>
+                </div>
+            </div>
+        </div> -->
+        <div class="col mt-2 filter">
+            <div class="product-left">
+                <h1>Purple Queen Guppy </h1>
+                <div class="star-icon">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="img-magnifier-container "  onmouseover="MoveOn()" onmouseout ="MoveOut()">
+                    <img id="myimage" width="600" height="400" src="img/Purple-Queen-Guppy-Males.jpg">
+
+                </div>
+
+            </div>
+            <div class="product-right">
+                <p class="price">50.000 VNĐ</p>
+                <i style="color:rgb(255, 102, 0);font-size: 40px;" class="fas fa-exclamation-triangle">
+                </i>
+
+                <span class="describe" style="font-family:Impact
+                    Charcoal;color:red;margin-left:5px;text-transform: uppercase;font-weight:bold;font-weight: 100px;">
+                    Your live fish may not match the image shown due to natural
+                    variations in each species. Each companion animal is different in shape, color, and
+                    personality.</span>
+                <div class="select-holder">
+                    <p style="margin-bottom: 0;margin-left:5px">Size</p>
+                    <select style="width:100%;" clas="" name="">
+                        <option>Small</option>
+                        <option>Large</option>
+
+                    </select>
+                </div>
+                <div style="border:2px solid black;width:30%;height:38px;float:left;display: flex;justify-content: space-between;"
+                    class="product-add">
+
+                    <i style="cursor:pointer;padding-top:10px;padding-left:10px" onClick="Plus()"
+                        class="fa fa-plus "></i>
+                    <input id="quantity" style="padding-left:20px;width:35%;font-size:30px;font-weight: bold;" value="1"
+                        type="number" disabled min="1" max="999">
+                    <i style="padding-top:10px;cursor:pointer;padding-right:30px" onClick="Minus()"
+                        class="fa fa-minus pt-2"></i>
+
+
+
+                </div>
+                <input style="width:70%" class="btn btn-dark" type="submit" value="ADD TO CART">
+
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <footer class="page-footer font-small footerne pt-4">
+          
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+          
+              <!-- Grid row -->
+              <div class="row">
+          
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+          
+                  <!-- Content -->
+                  <h5 class="text-uppercase">Online Fish Shop</h5>
+                  <p>Where you can immerse yourself in aquarium</p>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none pb-3">
+          
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+          
+                  <!-- Links -->
+                  <h5 class="text-uppercase">Quick Links</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                      <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                      <a href="#!">Link 4</a>
+                    </li>
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 aaaa">
+          
+                  <!-- Links -->
+                  <h5 class="text-uppercase ">Get in touch</h5>
+          
+                  <ul class="list-unstyled">
+                      <li>
+                        <i class="fa fa-map-marker"></i> 123 Sebastian, USA.</li>
+                      <li>
+                        <i class="fa fa-mobile"></i> 333 222 3333 </li>
+                      <li>
+                        <i class="fa fa-phone"></i> +222 11 4444 </li>
+                      <li>
+                        <i class="fa fa-envelope-o"></i>
+                        <a href="#"> mail@example.com</a>
+                      </li>
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+              </div>
+              <!-- Grid row -->
+              <div class="sub-some ">
+                <h5>Payment Method</h5>
+                <ul>
+                  <li>
+                    <img src="img/pay2.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay5.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay1.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay4.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay6.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay3.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay7.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay8.png" alt="">
+                  </li>
+                  <li>
+                    <img src="img/pay9.png" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Footer Links -->
+          
+             <!-- PaymentMethod -->
+             
+            <!-- Copyright -->
+            <div class="footer-copyright text-center footerright py-3">© 2020 Copyright:
+              <a style="text-decoration: none; color: rgb(248, 181, 81);" href="https://mdbootstrap.com/"> HTHK.com</a>
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
+
+        
+        <script src="script.js"></script>
+
+</body>
