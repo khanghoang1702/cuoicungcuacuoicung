@@ -12,7 +12,7 @@ and open the template in the editor.
 <html>
 
     <head>
-        <title>Aquarium </title>
+        <title>Aquarium Store</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -90,32 +90,7 @@ and open the template in the editor.
                         </a>
 
                     </li>
-                    <!-- <li class="nav-item dropdown">
-<<<<<<< HEAD
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                AQUATIC ACCESSORIES
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Fish</a>
-                                <a class="dropdown-item" href="#">Shrimp</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Turtle</a>
-                            </div>
-                        </li> -->
-=======
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            AQUATIC ACCESSORIES
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Fish</a>
-                            <a class="dropdown-item" href="#">Shrimp</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Turtle</a>
-                        </div>
-                    </li> -->
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
+                  
                     <li class="nav-item">
                         <a class="nav-link" id="navlink2" href="#aquaknow">AQUATIC KNOWLEDGE</a>
                     </li>
@@ -123,18 +98,6 @@ and open the template in the editor.
                         <a class="nav-link" id="navlink2" href="#about-us">About</a>
                     </li>
 
-<<<<<<< HEAD
-=======
-                    <!-- <li class="nav-item">
-                                <a
-                                  class="nav-link disabled"
-                                  href="#"
-                                  tabindex="-1"
-                                  aria-disabled="true"
-                                  >Disabled</a
-                                >
-                              </li> -->
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 </ul>
 
 
@@ -495,44 +458,26 @@ and open the template in the editor.
                     AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                 </p>
                 <span>
-<<<<<<< HEAD
                     <p> Author: </p>
                 </span>
                 <span>
                     <p> Date: </p>
-=======
-                    <p > Author: </p>
-                </span>
-                <span>
-                    <p > Date: </p>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 </span>
 
             </div>
             <div class="news-container">
                 <img src="img/ca44k.jpg" alt="">
 
-<<<<<<< HEAD
                 <a href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
-=======
-                <a  href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
 
                 <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                     AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                 </p>
                 <span>
-<<<<<<< HEAD
                     <p> Author: </p>
                 </span>
                 <span>
                     <p> Date: </p>
-=======
-                    <p > Author: </p>
-                </span>
-                <span>
-                    <p > Date: </p>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 </span>
             </div>
         </div>
@@ -756,11 +701,7 @@ and open the template in the editor.
 
         <!-- Copyright -->
         <div class="footer-copyright text-center footerright py-3">
-<<<<<<< HEAD
-            � HTHK 2020
-=======
             © HTHK 2020
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
         </div>
         <!-- Copyright -->
     </footer>

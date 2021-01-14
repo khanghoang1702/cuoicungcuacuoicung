@@ -28,7 +28,6 @@ public class ItemDB {
         String qString = "SELECT item FROM Items item "  ;
           TypedQuery<Items> q = entityManager.createQuery(qString, Items.class);
 
-<<<<<<< HEAD
         try {
             List<Items> listItems = (List<Items>) q.getResultList();
             return listItems;
@@ -39,15 +38,6 @@ public class ItemDB {
             entityManager.close();
 
         }
-=======
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
-        EntityManager entityManager = factory.createEntityManager();
-        String sql = "SELECT item  FROM Items item";
-        TypedQuery<Items> query = entityManager.createQuery(sql, Items.class);
-
-        List<Items> listItems = (List<Items>) query.getResultList();
-        entityManager.close();
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
 
 
     }

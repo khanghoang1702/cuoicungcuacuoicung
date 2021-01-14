@@ -12,11 +12,7 @@ and open the template in the editor.
 <html>
 
     <head>
-<<<<<<< HEAD
-        <title>Aquarium </title>
-=======
         <title>Aquarium Store</title>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -45,13 +41,8 @@ and open the template in the editor.
             <div class="h-container">
                 <div class="h-left">
                     <ul>
-<<<<<<< HEAD
                         <li><a href="signIn.jsp">SIGN IN</a></li>
                         <li><a href="signUp.jsp">SIGN UP</a></li>
-=======
-                        <li><a href="Sign up Form/signIn.jsp">SIGN IN</a></li>
-                        <li><a href="Sign up Form/signUp.jsp">SIGN UP</a></li>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                         <li><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
@@ -99,32 +90,7 @@ and open the template in the editor.
                         </a>
 
                     </li>
-                    <!-- <li class="nav-item dropdown">
-<<<<<<< HEAD
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                AQUATIC ACCESSORIES
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Fish</a>
-                                <a class="dropdown-item" href="#">Shrimp</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Turtle</a>
-                            </div>
-                        </li> -->
-=======
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            AQUATIC ACCESSORIES
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Fish</a>
-                            <a class="dropdown-item" href="#">Shrimp</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Turtle</a>
-                        </div>
-                    </li> -->
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
+                  
                     <li class="nav-item">
                         <a class="nav-link" id="navlink2" href="#aquaknow">AQUATIC KNOWLEDGE</a>
                     </li>
@@ -132,7 +98,6 @@ and open the template in the editor.
                         <a class="nav-link" id="navlink2" href="#about-us">About</a>
                     </li>
 
-<<<<<<< HEAD
                 </ul>
 
 
@@ -174,20 +139,6 @@ and open the template in the editor.
 
                     <input name="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
                            aria-label="Search" />
-=======
-                    <!-- <li class="nav-item">
-                                <a
-                                  class="nav-link disabled"
-                                  href="#"
-                                  tabindex="-1"
-                                  aria-disabled="true"
-                                  >Disabled</a
-                                >
-                              </li> -->
-                </ul>
-                <form class="form-inline searchbar my-2 my-lg-0 mr-2">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
                         Search
                     </button>
@@ -207,7 +158,6 @@ and open the template in the editor.
                     </div>
                     <div class="list-group list-category showCategory" id="list-tab" role="tablist">
                         <div class="categories-list">
-<<<<<<< HEAD
                             <a class="category-item categories-list" 
                                href="/webproject/Classify?cate=betta">Betta Fish</a>
                         </div>
@@ -226,26 +176,6 @@ and open the template in the editor.
                         <div class="categories-list">
                             <a class="category-item categories-list"
                                href="/webproject/Classify?cate=saltwater">Saltwater Fish</a>
-=======
-                            <a class="category-item categories-list" id="list-home-list " data-toggle="list"
-                               href="#list-home" role="tab" aria-controls="home">Betta Fish</a>
-                        </div>
-                        <div class="categories-list">
-                            <a class="category-item categories-list" id="list-profile-list " data-toggle="list"
-                               href="#list-profile" role="tab" aria-controls="profile">Freshwater Fish</a>
-                        </div>
-                        <div class="categories-list">
-                            <a class="category-item categories-list" id="list-messages-list " data-toggle="list"
-                               href="#list-messages" role="tab" aria-controls="messages">Shrimp</a>
-                        </div>
-                        <div class="categories-list">
-                            <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                               href="#list-settings" role="tab" aria-controls="settings">Pond Fish</a>
-                        </div>
-                        <div class="categories-list">
-                            <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                               href="#list-settings" role="tab" aria-controls="settings">Saltwater Fish</a>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                         </div>
                     </div>
                 </div>
@@ -423,10 +353,6 @@ and open the template in the editor.
                             </h1>
 
                             <div class="btnPurchase">
-<<<<<<< HEAD
-                                <input type="button" class="btn btn-primary mr-2" value="Add to cart">
-                                <input type="button" class="btn btn-outline-primary " value="Buy now">
-=======
                                 <form action="add-to-cart">
                                     <input type="submit" class="btn btn-primary mr-2" value="Add to cart">
                                     <input type="hidden" value="<%=item.getItemID()%>" name ="code">
@@ -435,7 +361,6 @@ and open the template in the editor.
                                     <input type="submit" class="btn btn-outline-primary " value="Buy now">
                                     <input type="hidden" value="<%=item.getItemID()%>" name ="code">
                                 </form>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                             </div>
                         </div>
 
@@ -533,44 +458,26 @@ and open the template in the editor.
                     AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                 </p>
                 <span>
-<<<<<<< HEAD
                     <p> Author: </p>
                 </span>
                 <span>
                     <p> Date: </p>
-=======
-                    <p > Author: </p>
-                </span>
-                <span>
-                    <p > Date: </p>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 </span>
 
             </div>
             <div class="news-container">
                 <img src="img/ca44k.jpg" alt="">
 
-<<<<<<< HEAD
                 <a href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
-=======
-                <a  href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
 
                 <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                     AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
                 </p>
                 <span>
-<<<<<<< HEAD
                     <p> Author: </p>
                 </span>
                 <span>
                     <p> Date: </p>
-=======
-                    <p > Author: </p>
-                </span>
-                <span>
-                    <p > Date: </p>
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 </span>
             </div>
         </div>
@@ -794,11 +701,7 @@ and open the template in the editor.
 
         <!-- Copyright -->
         <div class="footer-copyright text-center footerright py-3">
-<<<<<<< HEAD
-            � HTHK 2020
-=======
             © HTHK 2020
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
         </div>
         <!-- Copyright -->
     </footer>
