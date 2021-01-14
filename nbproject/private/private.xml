@@ -3,17 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/pc/Desktop/emmaphaemlamconcho/FinalFishop/src/java/NewServlet.java</file>
-            <file>file:/C:/Users/pc/Desktop/emmaphaemlamconcho/FinalFishop/src/java/controler/NewServlet.java</file>
-=======
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/src/java/model/Cart.java</file>
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/src/java/dao/ItemDB.java</file>
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/web/shoppingCart.html</file>
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/src/java/model/Users.java</file>
-            <file>file:/C:/Users/Administrator/Desktop/FinalFishop/src/java/dao/userDB.java</file>
->>>>>>> f51787e14e4b3b5ac35c792002a3a119ca936ec7
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/src/java/model/cartItem.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/src/java/model/Cart.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/web/JS/shoppingCart.js</file>
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/web/shoppingCart.jsp</file>
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/src/java/controler/shoppingCart.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Desktop/cuoicungcuacuoicung/web/CSS/shoppingCart.css</file>
         </group>
     </open-files>
 </project-private>

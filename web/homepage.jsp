@@ -11,225 +11,129 @@ and open the template in the editor.
 -->
 <html>
 
-<head>
-    <title>Aquarium Store</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <title>Aquarium Store</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
         <link rel="stylesheet" href="./CSS/owl.carousel.min.css">
         <link rel="stylesheet" href="./CSS/owl.theme.default.min.css">
-    <link rel="stylesheet" href="CSS/logo.css" />
+        <link rel="stylesheet" href="CSS/logo.css" />
 
-    <link rel="stylesheet" href="CSS/about.css" />
+        <link rel="stylesheet" href="CSS/about.css" />
 
-    <link rel="stylesheet" href="CSS/aquaknow.css">
-    <link rel="stylesheet" href="CSS/fishtank.css">
-    <link rel="stylesheet" href="CSS/style.css" />
-</head>
+        <link rel="stylesheet" href="CSS/aquaknow.css">
+        <link rel="stylesheet" href="CSS/fishtank.css">
+        <link rel="stylesheet" href="CSS/style.css" />
+    </head>
 
-<body>
-    <!-- Header -->
-    <div id="header">
-        <div class="banner-bg"></div>
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <div class="banner-bg"></div>
 
-        <div class="h-container">
-            <div class="h-left">
-                <ul>
-                    <li><a href="Sign up Form/signIn.jsp">SIGN IN</a></li>
-                    <li><a href="Sign up Form/signUp.jsp">SIGN UP</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="h-right">
-                <span><a href="#"><i class="fab fa-facebook-square"></i></a></span>
-                <span><a href="#"><i class="fab fa-instagram-square"></i></a></span>
-                <span><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
-            </div>
-        </div>
-        <div class="h-banner">
-            <div class="banner-content">
-                <h1></h1>
-                <a class="" href="#navigation"><button class="btnToProducts"><i class="fas fa-fish"></i>
-
-                    </button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- NavBar -->
-    <nav class="myNavbar navbar navbar-expand-xl navbar-light sticky-top pr-1" id="navigation">
-        <a class="navbar-brand" href="#">
-            <div class="logo">
-                <div class="image-Logo"></div>
-                <div class="brand">
-                    <h1>7COLORS</h1>
-                    <h1>7COLORS</h1>
+            <div class="h-container">
+                <div class="h-left">
+                    <ul>
+                        <li><a href="Sign up Form/signIn.jsp">SIGN IN</a></li>
+                        <li><a href="Sign up Form/signUp.jsp">SIGN UP</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="h-right">
+                    <span><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+                    <span><a href="#"><i class="fab fa-instagram-square"></i></a></span>
+                    <span><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
                 </div>
             </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="h-banner">
+                <div class="banner-content">
+                    <h1></h1>
+                    <a class="" href="#navigation"><button class="btnToProducts"><i class="fas fa-fish"></i>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" id="navlink" href="#">HOME <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" id="navlink1" href="#specialfish" aria-haspopup="true" aria-expanded="false">
-                        FISH
-                    </a>
-
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        AQUATIC ACCESSORIES
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Fish</a>
-                        <a class="dropdown-item" href="#">Shrimp</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Turtle</a>
-                    </div>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" id="navlink2" href="#aquaknow">AQUATIC KNOWLEDGE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="navlink2" href="#about-us">About</a>
-                </li>
-
-                <!-- <li class="nav-item">
-                            <a
-                              class="nav-link disabled"
-                              href="#"
-                              tabindex="-1"
-                              aria-disabled="true"
-                              >Disabled</a
-                            >
-                          </li> -->
-            </ul>
-            <form class="form-inline searchbar my-2 my-lg-0 mr-2">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-                    Search
-                </button>
-            </form>
-        </div>
-    </nav>
-    <!--End NavBar -->
-
-    <!-- Contents -->
-    <div class="row contents">
-        <!-- <div class="col-1"></div> -->
-
-        <div class="col-2 mt-2 filter">
-            <div class="category">
-                <div class="category-text text-uppercase">
-                    <i class="fa fa-list"></i> Categories
-                </div>
-                <div class="list-group list-category showCategory" id="list-tab" role="tablist">
-                    <div class="categories-list">
-                        <a class="category-item categories-list" id="list-home-list " data-toggle="list"
-                            href="#list-home" role="tab" aria-controls="home">Betta Fish</a>
-                    </div>
-                    <div class="categories-list">
-                        <a class="category-item categories-list" id="list-profile-list " data-toggle="list"
-                            href="#list-profile" role="tab" aria-controls="profile">Freshwater Fish</a>
-                    </div>
-                    <div class="categories-list">
-                        <a class="category-item categories-list" id="list-messages-list " data-toggle="list"
-                            href="#list-messages" role="tab" aria-controls="messages">Shrimp</a>
-                    </div>
-                    <div class="categories-list">
-                        <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                            href="#list-settings" role="tab" aria-controls="settings">Pond Fish</a>
-                    </div>
-                    <div class="categories-list">
-                        <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                            href="#list-settings" role="tab" aria-controls="settings">Saltwater Fish</a>
-                    </div>
-                </div>
-            </div>
-            <div class="category priceRange">
-                <div class="category-text text-uppercase category-tag">
-                    <label for=""><i class="fa fa-list"></i> Price</label>
-
-                    <i class="fa fa-plus icon"></i>
-                </div>
-                <div class="list-group list-category" id="list-tab" role="tablist">
-                    <label for="primary" class="btn btn-primary category-checkbox">
-                        <input type="checkbox" id="primary" /> Less than $10</label>
-                    <label for="info" class="btn btn-info category-checkbox">
-                        <input type="checkbox" id="info" /> $10 to $25</label>
-                    <label for="success" class="btn btn-success category-checkbox"><input type="checkbox"
-                            id="success" /> $25 to
-                        $50</label>
-                    <label for="warning" class="btn btn-warning category-checkbox">
-                        <input type="checkbox" id="warning" /> $50 to $100</label>
-                    <label for="danger" class="btn btn-danger category-checkbox"><input type="checkbox" id="danger" />
-                        More than
-                        $100
-                    </label>
-                </div>
-            </div>
-            <div class="category Brand">
-                <div class="category-text text-uppercase category-tag">
-                    <label for=""><i class="fa fa-list"></i> Brand</label>
-                    <i class="fa fa-plus icon"></i>
-                </div>
-                <div class="list-group list-category" id="list-tab" role="tablist">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search this blog" />
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <label for="primary" class="category-item category-checkbox">
-                        <input type="checkbox" id="primary" /> Less than $10</label>
-                    <label for="info" class="category-item category-checkbox">
-                        <input type="checkbox" id="info" /> $10 to $25</label>
-                    <label for="success" class="category-item category-checkbox"><input type="checkbox" id="success" />
-                        $25 to
-                        $50</label>
-                    <label for="warning" class="category-item category-checkbox">
-                        <input type="checkbox" id="warning" /> $50 to $100</label>
-                    <label for="danger" class="category-item category-checkbox"><input type="checkbox" id="danger" />
-                        More than
-                        $100
-                    </label>
+                        </button></a>
                 </div>
             </div>
         </div>
 
-
-        <div class="col products">
-
-
-            <button type="button" class="btn btn-outline-info btn-soft-mobile">
-                Sort & Filter
+        <!-- NavBar -->
+        <nav class="myNavbar navbar navbar-expand-xl navbar-light sticky-top pr-1" id="navigation">
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    <div class="image-Logo"></div>
+                    <div class="brand">
+                        <h1>7COLORS</h1>
+                        <h1>7COLORS</h1>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="filter-mobile">
-                <h1>Sort & Filter</h1>
-                <div class="closeFilterMobile" onclick="this.parentElement.style.display = 'hidden'">
-                    <i class="fas fa-times" style="cursor: pointer"></i>
-                </div>
-                <select name="" id="">
-                    <option value="Most popular">Most popular</option>
-                </select>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="navlink" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="navlink1" href="#specialfish" aria-haspopup="true" aria-expanded="false">
+                            FISH
+                        </a>
+
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            AQUATIC ACCESSORIES
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Fish</a>
+                            <a class="dropdown-item" href="#">Shrimp</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Turtle</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="navlink2" href="#aquaknow">AQUATIC KNOWLEDGE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navlink2" href="#about-us">About</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                                <a
+                                  class="nav-link disabled"
+                                  href="#"
+                                  tabindex="-1"
+                                  aria-disabled="true"
+                                  >Disabled</a
+                                >
+                              </li> -->
+                </ul>
+                <form class="form-inline searchbar my-2 my-lg-0 mr-2">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+        <!--End NavBar -->
+
+        <!-- Contents -->
+        <div class="row contents">
+            <!-- <div class="col-1"></div> -->
+
+            <div class="col-2 mt-2 filter">
                 <div class="category">
                     <div class="category-text text-uppercase">
                         <i class="fa fa-list"></i> Categories
@@ -237,27 +141,27 @@ and open the template in the editor.
                     <div class="list-group list-category showCategory" id="list-tab" role="tablist">
                         <div class="categories-list">
                             <a class="category-item categories-list" id="list-home-list " data-toggle="list"
-                                href="#list-home" role="tab" aria-controls="home">Betta Fish</a>
+                               href="#list-home" role="tab" aria-controls="home">Betta Fish</a>
                         </div>
                         <div class="categories-list">
                             <a class="category-item categories-list" id="list-profile-list " data-toggle="list"
-                                href="#list-profile" role="tab" aria-controls="profile">Freshwater Fish</a>
+                               href="#list-profile" role="tab" aria-controls="profile">Freshwater Fish</a>
                         </div>
                         <div class="categories-list">
                             <a class="category-item categories-list" id="list-messages-list " data-toggle="list"
-                                href="#list-messages" role="tab" aria-controls="messages">Invertebrates</a>
+                               href="#list-messages" role="tab" aria-controls="messages">Shrimp</a>
                         </div>
                         <div class="categories-list">
                             <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                                href="#list-settings" role="tab" aria-controls="settings">Pond Fish</a>
+                               href="#list-settings" role="tab" aria-controls="settings">Pond Fish</a>
                         </div>
                         <div class="categories-list">
                             <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
-                                href="#list-settings" role="tab" aria-controls="settings">Saltwater Fish</a>
+                               href="#list-settings" role="tab" aria-controls="settings">Saltwater Fish</a>
                         </div>
                     </div>
                 </div>
-                <div class="category">
+                <div class="category priceRange">
                     <div class="category-text text-uppercase category-tag">
                         <label for=""><i class="fa fa-list"></i> Price</label>
 
@@ -269,17 +173,17 @@ and open the template in the editor.
                         <label for="info" class="btn btn-info category-checkbox">
                             <input type="checkbox" id="info" /> $10 to $25</label>
                         <label for="success" class="btn btn-success category-checkbox"><input type="checkbox"
-                                id="success" /> $25 to
+                                                                                              id="success" /> $25 to
                             $50</label>
                         <label for="warning" class="btn btn-warning category-checkbox">
                             <input type="checkbox" id="warning" /> $50 to $100</label>
-                        <label for="danger" class="btn btn-danger category-checkbox"><input type="checkbox"
-                                id="danger" /> More than
+                        <label for="danger" class="btn btn-danger category-checkbox"><input type="checkbox" id="danger" />
+                            More than
                             $100
                         </label>
                     </div>
                 </div>
-                <div class="category">
+                <div class="category Brand">
                     <div class="category-text text-uppercase category-tag">
                         <label for=""><i class="fa fa-list"></i> Brand</label>
                         <i class="fa fa-plus icon"></i>
@@ -297,274 +201,378 @@ and open the template in the editor.
                             <input type="checkbox" id="primary" /> Less than $10</label>
                         <label for="info" class="category-item category-checkbox">
                             <input type="checkbox" id="info" /> $10 to $25</label>
-                        <label for="success" class="category-item category-checkbox"><input type="checkbox"
-                                id="success" /> $25 to
+                        <label for="success" class="category-item category-checkbox"><input type="checkbox" id="success" />
+                            $25 to
                             $50</label>
                         <label for="warning" class="category-item category-checkbox">
                             <input type="checkbox" id="warning" /> $50 to $100</label>
-                        <label for="danger" class="category-item category-checkbox"><input type="checkbox"
-                                id="danger" /> More than
+                        <label for="danger" class="category-item category-checkbox"><input type="checkbox" id="danger" />
+                            More than
                             $100
                         </label>
                     </div>
                 </div>
             </div>
-            <!-- End Filter mobile -->
-            <% List<Items> listItems = ItemDB.getAllItems();
+
+
+            <div class="col products">
+
+
+                <button type="button" class="btn btn-outline-info btn-soft-mobile">
+                    Sort & Filter
+                </button>
+
+                <div class="filter-mobile">
+                    <h1>Sort & Filter</h1>
+                    <div class="closeFilterMobile" onclick="this.parentElement.style.display = 'hidden'">
+                        <i class="fas fa-times" style="cursor: pointer"></i>
+                    </div>
+                    <select name="" id="">
+                        <option value="Most popular">Most popular</option>
+                    </select>
+                    <div class="category">
+                        <div class="category-text text-uppercase">
+                            <i class="fa fa-list"></i> Categories
+                        </div>
+                        <div class="list-group list-category showCategory" id="list-tab" role="tablist">
+                            <div class="categories-list">
+                                <a class="category-item categories-list" id="list-home-list " data-toggle="list"
+                                   href="#list-home" role="tab" aria-controls="home">Betta Fish</a>
+                            </div>
+                            <div class="categories-list">
+                                <a class="category-item categories-list" id="list-profile-list " data-toggle="list"
+                                   href="#list-profile" role="tab" aria-controls="profile">Freshwater Fish</a>
+                            </div>
+                            <div class="categories-list">
+                                <a class="category-item categories-list" id="list-messages-list " data-toggle="list"
+                                   href="#list-messages" role="tab" aria-controls="messages">Invertebrates</a>
+                            </div>
+                            <div class="categories-list">
+                                <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
+                                   href="#list-settings" role="tab" aria-controls="settings">Pond Fish</a>
+                            </div>
+                            <div class="categories-list">
+                                <a class="category-item categories-list" id="list-settings-list " data-toggle="list"
+                                   href="#list-settings" role="tab" aria-controls="settings">Saltwater Fish</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="category-text text-uppercase category-tag">
+                            <label for=""><i class="fa fa-list"></i> Price</label>
+
+                            <i class="fa fa-plus icon"></i>
+                        </div>
+                        <div class="list-group list-category" id="list-tab" role="tablist">
+                            <label for="primary" class="btn btn-primary category-checkbox">
+                                <input type="checkbox" id="primary" /> Less than $10</label>
+                            <label for="info" class="btn btn-info category-checkbox">
+                                <input type="checkbox" id="info" /> $10 to $25</label>
+                            <label for="success" class="btn btn-success category-checkbox"><input type="checkbox"
+                                                                                                  id="success" /> $25 to
+                                $50</label>
+                            <label for="warning" class="btn btn-warning category-checkbox">
+                                <input type="checkbox" id="warning" /> $50 to $100</label>
+                            <label for="danger" class="btn btn-danger category-checkbox"><input type="checkbox"
+                                                                                                id="danger" /> More than
+                                $100
+                            </label>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="category-text text-uppercase category-tag">
+                            <label for=""><i class="fa fa-list"></i> Brand</label>
+                            <i class="fa fa-plus icon"></i>
+                        </div>
+                        <div class="list-group list-category" id="list-tab" role="tablist">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search this blog" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <label for="primary" class="category-item category-checkbox">
+                                <input type="checkbox" id="primary" /> Less than $10</label>
+                            <label for="info" class="category-item category-checkbox">
+                                <input type="checkbox" id="info" /> $10 to $25</label>
+                            <label for="success" class="category-item category-checkbox"><input type="checkbox"
+                                                                                                id="success" /> $25 to
+                                $50</label>
+                            <label for="warning" class="category-item category-checkbox">
+                                <input type="checkbox" id="warning" /> $50 to $100</label>
+                            <label for="danger" class="category-item category-checkbox"><input type="checkbox"
+                                                                                               id="danger" /> More than
+                                $100
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Filter mobile -->
+                <%
+                    List<Items> listItems = ItemDB.getAllItems();
+                    session.setAttribute("listItems", listItems);
                 %>
                 <div class="items-container">
                     <% for (Items item : listItems) {%>
-                        <div class="items">
-                            <img src="<%= item.getItemImageData()%>" alt="Fish here">
-                            <div class="btnitem">
-                                <h1>
-                                    <%=item.getItemName()%>
-                                        <p class="price">
-                                            <%=item.getItemPrice()%>
-                                        </p>
-                                </h1>
+                    <div class="items">
+                        <img src="<%= item.getItemImageData()%>" alt="Fish here">
+                        <div class="btnitem">
+                            <h1>
+                                <%=item.getItemName()%>
+                                <p class="price">
+                                    <%=item.getItemPrice()%>
+                                </p>
+                            </h1>
 
-                                <div class="btnPurchase">
-                                    <input type="button" class="btn btn-primary mr-2" value="Add to cart">
-                                    <input type="button" class="btn btn-outline-primary " value="Buy now">
-                                </div>
+                            <div class="btnPurchase">
+                                <form action="add-to-cart">
+                                    <input type="submit" class="btn btn-primary mr-2" value="Add to cart">
+                                    <input type="hidden" value="<%=item.getItemID()%>" name ="code">
+                                </form>
+                                <form action="buy-now">
+                                    <input type="submit" class="btn btn-outline-primary " value="Buy now">
+                                    <input type="hidden" value="<%=item.getItemID()%>" name ="code">
+                                </form>
                             </div>
-
-
                         </div>
 
-                        <% }%>
+
+                    </div>
+
+                    <% }%>
                 </div>
+            </div>
+        </div>
+        <!-- End Contents -->
+        <div class="product-card-section" id="specialfish">
+            <h2>Special Offers </h2>
+            <div class="product-card-container">
+                <div class="product-card">
+
+                    <div class="card mySlides-1">
+                        <img class="" src="img/black-guppy.jpg">
+                        <h1>Black Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-1">
+                        <img class="" src="img/White-Guppy.jpg">
+                        <h1>White Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-1">
+                        <img class="" src="img/Yellow-Laser-Tail.jpg">
+                        <h1>Yellow Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="card mySlides-2">
+                        <img class="" src="img/black-guppy.jpg">
+                        <h1>Black Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-2">
+                        <img class="" src="img/White-Guppy.jpg">
+                        <h1>White Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-2">
+                        <img class="" src="img/Yellow-Laser-Tail.jpg">
+                        <h1>Yellow Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="card mySlides-3">
+                        <img class="" src="img/black-guppy.jpg">
+                        <h1>Black Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-3">
+                        <img class="" src="img/White-Guppy.jpg">
+                        <h1>White Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="card mySlides-3">
+                        <img class="" src="img/Yellow-Laser-Tail.jpg">
+                        <h1>Yellow Guppy</h1>
+                        <p class="price">$19.99</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- End Contents -->
-    <div class="product-card-section" id="specialfish">
-        <h2>Special Offers </h2>
-        <div class="product-card-container">
-            <div class="product-card">
 
-                <div class="card mySlides-1">
-                    <img class="" src="img/black-guppy.jpg">
-                    <h1>Black Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-1">
-                    <img class="" src="img/White-Guppy.jpg">
-                    <h1>White Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-1">
-                    <img class="" src="img/Yellow-Laser-Tail.jpg">
-                    <h1>Yellow Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-    
+    <div class="main-container" id="aquaknow">
+        <h2>Aquatic Knowledge</h2>
+        <div class="news">
+            <div class="news-container ">
+                <img src="img/ca34k.jpg" alt="">
+
+                <a href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
+
+                <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
+                    AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
+                </p>
+                <span>
+                    <p > Author: </p>
+                </span>
+                <span>
+                    <p > Date: </p>
+                </span>
+
             </div>
-            <div class="product-card">
+            <div class="news-container">
+                <img src="img/ca44k.jpg" alt="">
 
-                <div class="card mySlides-2">
-                    <img class="" src="img/black-guppy.jpg">
-                    <h1>Black Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-2">
-                    <img class="" src="img/White-Guppy.jpg">
-                    <h1>White Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-2">
-                    <img class="" src="img/Yellow-Laser-Tail.jpg">
-                    <h1>Yellow Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-    
-            </div>
-            <div class="product-card">
+                <a  href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
 
-                <div class="card mySlides-3">
-                    <img class="" src="img/black-guppy.jpg">
-                    <h1>Black Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-3">
-                    <img class="" src="img/White-Guppy.jpg">
-                    <h1>White Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                <div class="card mySlides-3">
-                    <img class="" src="img/Yellow-Laser-Tail.jpg">
-                    <h1>Yellow Guppy</h1>
-                    <p class="price">$19.99</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-    
+                <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
+                    AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
+                </p>
+                <span>
+                    <p > Author: </p>
+                </span>
+                <span>
+                    <p > Date: </p>
+                </span>
             </div>
         </div>
-        
+        <div class="subnews">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+                <div class="item">
+                    <img src="./img/ph.jpg" alt="subnews">
+                    <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
+                    <p>ALLYI</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="main-container" id="aquaknow">
-    <h2>Aquatic Knowledge</h2>
-    <div class="news">
-        <div class="news-container ">
-            <img src="img/ca34k.jpg" alt="">
-
-            <a href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
-
-            <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
-                AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
-            </p>
-            <span>
-                <p > Author: </p>
-              </span>
-              <span>
-                <p > Date: </p>
-              </span>
-
-        </div>
-        <div class="news-container">
-          <img src="img/ca44k.jpg" alt="">
-  
-          <a  href="">ADJUST ADJUST ADJUSTADJUSTADJUST ADJUSTADJUSTADJUSTADJUSTADJUSTADJUST</a>
-  
-          <p>AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
-            AbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcdAbcd
-          </p>
-          <span>
-            <p > Author: </p>
-          </span>
-          <span>
-            <p > Date: </p>
-          </span>
-        </div>
-      </div>
-      <div class="subnews">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-            <div class="item">
-                <img src="./img/ph.jpg" alt="subnews">
-                <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, dolore.</a>
-                <p>ALLYI</p>
-            </div>
-        </div>
-      </div>
-</div>
-<div class="aboutcontent" id="about-us">
+    <div class="aboutcontent" id="about-us">
         <h2>OUR TEAM</h2>
         <div class="abseccond">
-                <div class="team__member">
-                    <img src="./img/thay.jpg" alt="">
-                    <div class="team__black">
-                        <h3>Le Quang Huy</h3>
-                        <p>-Leader</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
-                            dolore fuga?
-                        </p>
-                        <ul>
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="team__pink">
-                        <h3>Le Quang Huy</h3>
-                        <p>-Leader</p>
-                    </div>
-    
+            <div class="team__member">
+                <img src="./img/thay.jpg" alt="">
+                <div class="team__black">
+                    <h3>Le Quang Huy</h3>
+                    <p>-Leader</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
+                        dolore fuga?
+                    </p>
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
                 </div>
-                <div class="team__member">
-                    <img src="./img/tu.jpg" alt="">
-                    <div class="team__black">
-                        <h3>Nguyen Thi Cam Tu</h3>
-                        <p>-Member</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
-                            dolore fuga?
-                        </p>
-                        <ul>
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="team__pink">
-                        <h3>Nguyen Thi Cam Tu</h3>
-                        <p>-Member</p>
-                    </div>
+                <div class="team__pink">
+                    <h3>Le Quang Huy</h3>
+                    <p>-Leader</p>
                 </div>
-                <div class="team__member">
-                    <img src="./img/hoang.jpg" alt="">
-                    <div class="team__black">
-                        <h3>Truong Minh Hoang</h3>
-                        <p>-Member</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
-                            dolore fuga?
-                        </p>
-                        <ul>
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="team__pink">
-                        <h3>Truong Minh Hoang</h3>
-                        <p>-Member</p>
-                    </div>
+
+            </div>
+            <div class="team__member">
+                <img src="./img/tu.jpg" alt="">
+                <div class="team__black">
+                    <h3>Nguyen Thi Cam Tu</h3>
+                    <p>-Member</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
+                        dolore fuga?
+                    </p>
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
                 </div>
-                <div class="team__member">
-                    <img src="./img/khang.jpg" alt="">
-                    <div class="team__black">
-                        <h3>Hoang Minh Khang</h3>
-                        <p>-Member</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
-                            dolore fuga?
-                        </p>
-                        <ul>
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="team__pink">
-                        <h3>Hoang Minh Khang</h3>
-                        <p>-Member</p>
-                    </div>
+                <div class="team__pink">
+                    <h3>Nguyen Thi Cam Tu</h3>
+                    <p>-Member</p>
                 </div>
+            </div>
+            <div class="team__member">
+                <img src="./img/hoang.jpg" alt="">
+                <div class="team__black">
+                    <h3>Truong Minh Hoang</h3>
+                    <p>-Member</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
+                        dolore fuga?
+                    </p>
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team__pink">
+                    <h3>Truong Minh Hoang</h3>
+                    <p>-Member</p>
+                </div>
+            </div>
+            <div class="team__member">
+                <img src="./img/khang.jpg" alt="">
+                <div class="team__black">
+                    <h3>Hoang Minh Khang</h3>
+                    <p>-Member</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, sint nisi eligendi recusandae
+                        dolore fuga?
+                    </p>
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team__pink">
+                    <h3>Hoang Minh Khang</h3>
+                    <p>-Member</p>
+                </div>
+            </div>
         </div>
-       
-</div>
+
+    </div>
     <footer class="page-footer font-small footerne pt-4">
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
@@ -672,31 +680,31 @@ and open the template in the editor.
         <!-- Copyright -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS/Interface.js"></script>
     <script src="JS/slide.js"></script>
     <script src="./JS/owl.carousel.min.js"></script>
     <script>$('.owl-carousel').owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: false,
-        responsive: {
-            // 0: {
-            //     items: 1
-            // },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 2
-            }
-        }
-    })</script>
+                            loop: false,
+                            margin: 10,
+                            nav: false,
+                            responsive: {
+                                // 0: {
+                                //     items: 1
+                                // },
+                                600: {
+                                    items: 1
+                                },
+                                1000: {
+                                    items: 2
+                                }
+                            }
+                        })</script>
 </body>
 
 </html>

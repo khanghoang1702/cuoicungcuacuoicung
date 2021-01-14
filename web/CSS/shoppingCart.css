@@ -287,12 +287,13 @@ img {
   color: #777;
   margin-bottom: 0.5em;
 }
-.cart .items .cartSection h3 {
+.cart .items  h3   {
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  margin-bottom: 10px;
 }
 .cart .items .cartSection p {
   display: inline-block;
@@ -327,7 +328,7 @@ img {
   font-size: 1.25em;
 }
 .cart .items .cartSection input.qty {
-  width: 2em;
+  width: 4em;
   text-align: center;
   font-size: 1em;
   padding: 0.25em;
@@ -357,8 +358,9 @@ img {
   font-family: helvetica, arial, sans-serif;
 }
 
-a.remove {
+input.remove {
   text-decoration: none;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   font-weight: bold;
@@ -367,6 +369,7 @@ a.remove {
   font-size: 0.75em;
   display: inline-block;
   border-radius: 100%;
+  border: none;
   line-height: 0.85;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
@@ -374,7 +377,7 @@ a.remove {
   -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
-a.remove:hover {
+input.remove:hover {
   background: #f30;
 }
 
@@ -541,4 +544,54 @@ a.remove:hover {
     width: 100%;
     text-align: center;
   }
+  
+}
+
+/*checkbox*/
+.label--checkbox {
+  position: relative;
+  margin: 0.5rem;
+  font-family: Arial, sans-serif;
+  line-height: 135%;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  top: -0.375rem;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+.checkbox:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #f2f2f2;
+}
+.checkbox:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: 0.5rem;
+  border-color: #009688;
+  border-top-style: none;
+  border-right-style: none;
+}
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
 }

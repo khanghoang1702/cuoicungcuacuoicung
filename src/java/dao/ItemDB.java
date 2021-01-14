@@ -21,7 +21,8 @@ public class ItemDB {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
         EntityManager entityManager = factory.createEntityManager();
         String sql = "SELECT item  FROM Items item";
-        Query query = entityManager.createQuery(sql);
+        TypedQuery<Items> query = entityManager.createQuery(sql, Items.class);
+
         List<Items> listItems = (List<Items>) query.getResultList();
         entityManager.close();
 
