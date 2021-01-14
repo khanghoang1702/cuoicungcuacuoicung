@@ -44,16 +44,28 @@ and open the template in the editor.
                         odd
                         <%}%>">
 
+
                         <div class="infoWrap">
+                            <form action="Usure" class="formCB">
+                                <h3>YOU SURE??</h3>
+                                <input type="submit" name="<%=item.getItemID()%>" <%if (iCart.isChecked()) {%>
+                                       class="btn-on"
+                                       value="Yeah"
+                                       <%} else {%>
+                                       class="btn-off"
+                                       value="Nope"
+                                       <%}%> />
+                                <input type="hidden" value="<%=item.getItemID()%>" name ="code">
+                            </form>
                             <div class="cartSection">
 
                                 <img src="<%=item.getItemImageData()%>" alt="" class="itemImg" />
                                 <p class="itemNumber"><%=item.getItemID()%></p>
                                 <h3><%=item.getItemName()%></h3>
                                 <form action="update-item">
-                                    <p> <input type="number" min="1"  class="qty" name="quantity" placeholder="<%=iCart.getQuantity()%>"/>
+                                    <p> <input type="number" min="1"  class="qty" name="quantity" value="<%=iCart.getQuantity()%>"/>
 
-                                        <input type="submit"  class="remove" value="x">
+                                        <input type="submit"  class="update" value="U">
                                         <input type="hidden" value="<%=item.getItemID()%>" name ="code">
                                         x $<%=item.getItemPrice()%></p>
                                 </form>
@@ -62,13 +74,8 @@ and open the template in the editor.
                                 <p class="stockStatus"> In Stock</p>
                             </div>
 
-                            <form action="Usure" class="formCB">
-                                <input type="checkbox" class="CB" id="" name="<%=item.getItemID()%>" <%if (iCart.isChecked()) {%>
-                                       checked
-                                       <%}%> />
-                                <input type="submit" value="usure"/>
-                                <input type="hidden" value="<%=item.getItemID()%>" name ="code">
-                            </form>
+
+
 
 
 
@@ -77,17 +84,7 @@ and open the template in the editor.
                             </div>
                             <div class="cartSection removeWrap">
                                 <form action="remove-item">
-                                    <h3>YOU SURE??</h3>
-                                    <label class="label--checkbox">
 
-
-                                    </label>
-
-<!--                                    <input type="checkbox" class="checkbox" value="cb" name="<%=item.getItemID()%>"
-                                    <%if (iCart.isChecked()) {%>
-                                    checked
-                                    <%}%>
-                                    />-->
                                     <input type="submit"  class="remove" value="x">
                                     <input type="hidden" value="<%=item.getItemID()%>" name ="code">
 
@@ -99,9 +96,6 @@ and open the template in the editor.
                     </li>
                     <% }%>
 
-
-
-                    <!--<li class="items even">Item 2</li>-->
 
                 </ul>
             </div>

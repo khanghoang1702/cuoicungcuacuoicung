@@ -51,7 +51,6 @@ public class shoppingCart extends HttpServlet {
                 break;
             case "/update-item":
                 updateItem(request, response);
-                Usure(request, response);
                 break;
             case "/Usure":
                 Usure(request, response);
@@ -116,31 +115,18 @@ public class shoppingCart extends HttpServlet {
 
     }
 
-//    protected void Usure(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        HttpSession session = request.getSession();
-//        Cart cart = (Cart) session.getAttribute("cart");
-//        String productCode = request.getParameter("code");
-//        String check = request.getParameter(productCode);
-//        cartItem item = cart.lookUpCart(cart.getList(), productCode);
-//        if (check != null) {
-//            item.setChecked(true);
-//        } else {
-//            item.setChecked(false);
-//        }
-//
-//    }
     protected void Usure(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");
-        for (cartItem item : cart.getList()) {
-            String ID = item.getItem().getItemID();
-            String check = request.getParameter(ID);
-            if (check != null) {
-                item.setChecked(true);
-            } else {
-                item.setChecked(false);
-            }
+        String productCode = request.getParameter("code");
+        String check = request.getParameter(productCode);
+        cartItem item = cart.lookUpCart(cart.getList(), productCode);
+        if ("Nope".equals(check)) {
+            item.setChecked(true);
+        } else {
+            item.setChecked(false);
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
