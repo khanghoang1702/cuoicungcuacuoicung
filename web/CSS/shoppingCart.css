@@ -287,12 +287,13 @@ img {
   color: #777;
   margin-bottom: 0.5em;
 }
-.cart .items .cartSection h3 {
+.cart .items h3 {
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  margin-bottom: 10px;
 }
 .cart .items .cartSection p {
   display: inline-block;
@@ -327,7 +328,7 @@ img {
   font-size: 1.25em;
 }
 .cart .items .cartSection input.qty {
-  width: 2em;
+  width: 4em;
   text-align: center;
   font-size: 1em;
   padding: 0.25em;
@@ -357,8 +358,9 @@ img {
   font-family: helvetica, arial, sans-serif;
 }
 
-a.remove {
+input.remove {
   text-decoration: none;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   font-weight: bold;
@@ -367,6 +369,7 @@ a.remove {
   font-size: 0.75em;
   display: inline-block;
   border-radius: 100%;
+  border: none;
   line-height: 0.85;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
@@ -374,8 +377,31 @@ a.remove {
   -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
-a.remove:hover {
+input.remove:hover {
   background: #f30;
+}
+
+input.update {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: 0.5em;
+  font-size: 0.75em;
+  display: inline-block;
+  border-radius: 100%;
+  border: none;
+  line-height: 0.85;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+input.update:hover {
+  background: rgb(34, 214, 175);
 }
 
 .promoCode {
@@ -541,4 +567,19 @@ a.remove:hover {
     width: 100%;
     text-align: center;
   }
+}
+
+/* Sure Button */
+.btn-on,
+.btn-off {
+  width: 100px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.btn-on {
+  background-color: greenyellow;
+}
+.btn-off {
+  background-color: red;
 }

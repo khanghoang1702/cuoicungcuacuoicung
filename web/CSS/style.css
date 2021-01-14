@@ -516,15 +516,16 @@ li {
 }
 .abseccond {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
   width: 80%;
   margin: auto;
   /* padding: 0 50px; */
 }
 .team__member{
   position: relative;
-  width: 25%;
-  margin-right: 10px;
+  width: 20%;
+  /* margin-right: 10px; */
 }
 .abseccond .team__member:last-child{
   margin-right: 0;
@@ -641,9 +642,7 @@ li {
   align-items: center;
   flex-direction: column;
 }
-.aboutcontent{
-  height: 1000px;
-}
+
 .abseccond{
   /* display: flex;
   flex-wrap: wrap; */
@@ -660,8 +659,12 @@ li {
   .product-card{
     width: 80%;
   }
-  .team__member{
-    width: 50%;
+  .aboutcontent{
+    height: 1500px;
+  }
+  .abseccond{
+    align-items: center;
+    flex-direction: column;
   }
 }
 
