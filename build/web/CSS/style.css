@@ -58,7 +58,9 @@ li {
 .h-left ul li a:hover {
   color: rgba(227, 212, 13, 0.81);
 }
-
+.h-right{
+  transition: 0.8s;
+}
 .h-right span {
   display: inline-block;
   margin-left: 5px;
@@ -70,8 +72,17 @@ li {
   transition: all 0.4s;
 }
 
-.h-right span a:hover {
-  color: rgba(226, 24, 24, 1);
+.h-right span a:hover .fa-facebook-square{
+  color: rgb(24, 118, 226);
+  transition: 0.8s;
+}
+.h-right span a:hover .fa-instagram-square{
+  color: #bc2a8d;
+  transition: 0.8s;
+}
+.h-right span a:hover .fa-google-plus-square{
+  color:  #dd4b39;
+  transition: 0.8s;
 }
 
 .h-branch a img {
@@ -198,7 +209,7 @@ li {
 /* CSS nav bar*/
 
 .myNavbar {
-  z-index: 1;
+  z-index: 100;
   background-color: #0277bd;
   font-weight: bold;
 }
@@ -208,6 +219,9 @@ li {
 }
 .navbar-light .navbar-nav .nav-link {
   color: white;
+}
+.navbar-expand-xl .navbar-nav .nav-link{
+  padding-right: 30px;
 }
 /*end CSS nav bar*/
 
@@ -485,8 +499,8 @@ li {
 }
 /* About complement */
 .aboutcontent {
-  width: 100%;
-  height: 620px;
+  /* width: 100%; */
+  padding: 50px 0;
   background-color: #f9fbe7;
 }
 .aboutcontent .abtitle {
@@ -495,115 +509,176 @@ li {
 }
 
 .aboutcontent h2 {
-  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
   font-weight: bold;
   display: block;
 }
 .abseccond {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  /* padding: 0 50px; */
 }
-.abicon ul {
+.team__member{
+  position: relative;
+  width: 25%;
+  margin-right: 10px;
+}
+.abseccond .team__member:last-child{
+  margin-right: 0;
+}
+.team__member img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.team__black{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.747);
+  color: #fff;
+  opacity: 0;
+  transition: 0.6s;
+  text-align: center;
+}
+.team__black h3{
+  font-size: 20px;
+  padding: 15px 0;
+}
+.team__black p{
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+.team__black ul {
   list-style: none;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
-.abicon ul li {
+.team__black ul li {
   width: 45px;
   height: 45px;
-  line-height: 45px;
+  line-height: 40px;
   margin: 10px 10px;
-  text-align: center;
   cursor: pointer;
   border-radius: 10%;
-
   border: 5px solid #444c47;
   float: left;
   transition: all 0.5s ease;
 }
-.abicon ul li .fa {
+.team__black ul li .fa {
   color: #444c47;
+  font-size: 25px;
   /* margin-top: 20px; */
   transition: all 0.5s ease;
 }
-.abicon ul li:hover.facebook {
+.team__black ul li:hover.facebook {
   border: 5px solid #3b5998;
   box-shadow: 0 0 15px #3b5998;
   transition: all 0.5s ease;
 }
 
-.abicon ul li:hover .fa-facebook {
+.team__black ul li:hover .fa-facebook {
   color: #3b5998;
   text-shadow: 0 0 15px #3b5998;
   transition: all 0.5s ease;
 }
-.abicon ul li:hover.instagram {
+.team__black li:hover.instagram {
   border: 5px solid #bc2a8d;
   box-shadow: 0 0 15px #bc2a8d;
   transition: all 0.5s ease;
 }
 
-.abicon ul li:hover .fa-instagram {
+.team__black li:hover .fa-instagram {
   color: #bc2a8d;
   text-shadow: 0 0 15px #bc2a8d;
   transition: all 0.5s ease;
 }
-.abicon ul li:hover.google {
+.team__black li:hover.google {
   border: 5px solid #dd4b39;
   box-shadow: 0 0 15px #dd4b39;
   transition: all 0.5s ease;
 }
 
-.abicon ul li:hover .fa-google {
+.team__black li:hover .fa-google {
   color: #dd4b39;
   text-shadow: 0 0 15px #dd4b39;
   transition: all 0.5s ease;
 }
-.flip-card {
-  background-color: transparent;
-  width: 250px;
-  height: 300px;
-  perspective: 1000px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
+.team__pink{
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  background-color:#01579b ;
+  color: #fff;
+  padding: 5px;
+  transition: 0.5s;
 }
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.team__pink h3{
+  font-size: 20px;
 }
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  display: flex;
+.team__pink p{
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.team__member:hover .team__pink{
+  opacity: 0;
+}
+.team__member:hover .team__black{
+  opacity: 1; 
+}
+/* REPONSIVE */
+/* Special offers */
+@media only screen and (max-width: 1024px){
+.product-card-container{
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: rotateY(180deg);
 }
-/* BLOG  */
+.aboutcontent{
+  height: 1000px;
+}
+.abseccond{
+  /* display: flex;
+  flex-wrap: wrap; */
+  width: 100%;
+}
+.team__member{
+  
+  width: 200px;
+  height: 300px;
+
+}
+}
+@media only screen and (max-width: 740px){
+  .product-card{
+    width: 80%;
+  }
+  .team__member{
+    width: 50%;
+  }
+}
+
+/* adminTab */
+.tab
+{
+    font-size:20px;
+  color:white;
+  
+}
+.tab:hover
+{
+  color:black;
+}
+
+.tab-menu
+{
+  font-size:15px;
+
+}

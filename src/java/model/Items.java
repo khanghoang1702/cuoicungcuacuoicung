@@ -13,38 +13,52 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
-import dao.ItemDB;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author LEQUANGHUY
+ * @author tmh
  */
 @Entity
 @Table(name = "items")
-
+//@XmlRootElement
+//@NamedQueries({
+//    @NamedQuery(name = "Items.findAll", query = "SELECT i FROM Items i"),
+//    @NamedQuery(name = "Items.findByItemID", query = "SELECT i FROM Items i WHERE i.itemID = :itemID"),
+//    @NamedQuery(name = "Items.findByItemName", query = "SELECT i FROM Items i WHERE i.itemName = :itemName"),
+//    @NamedQuery(name = "Items.findByItemPrice", query = "SELECT i FROM Items i WHERE i.itemPrice = :itemPrice"),
+//    @NamedQuery(name = "Items.findByItemImageData", query = "SELECT i FROM Items i WHERE i.itemImageData = :itemImageData"),
+//    @NamedQuery(name = "Items.findByItemImageName", query = "SELECT i FROM Items i WHERE i.itemImageName = :itemImageName")})
 public class Items implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 220)
     @Column(name = "itemID")
     private String itemID;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 100)
     @Column(name = "itemName")
     private String itemName;
     @Basic(optional = false)
+    @NotNull
     @Column(name = "itemPrice")
     private double itemPrice;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 220)
     @Column(name = "itemImageData")
     private String itemImageData;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 30)
     @Column(name = "itemImageName")
     private String itemImageName;
-    @Basic(optional = false)
-    @Column(name = "quantity")
-    private int itemQuantity;
 
     public Items() {
     }
@@ -101,26 +115,7 @@ public class Items implements Serializable {
         this.itemImageName = itemImageName;
     }
 
-    public int getItemQuantity() {
-        return itemQuantity;
-    }
-
-    public void setItemQuantity(int itemQuantity) {
-        this.itemQuantity = itemQuantity;
-    }
-
-    public void decQuantity(int num) {
-        this.itemQuantity -= num;
-        ItemDB.updateItem(this);
-    }
-
-    public void incQuantity(int num) {
-        this.itemQuantity += num;
-        ItemDB.updateItem(this);
-    }
-
     @Override
-
     public int hashCode() {
         int hash = 0;
         hash += (itemID != null ? itemID.hashCode() : 0);
@@ -144,5 +139,5 @@ public class Items implements Serializable {
     public String toString() {
         return "model.Items[ itemID=" + itemID + " ]";
     }
-
+    
 }

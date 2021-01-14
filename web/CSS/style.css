@@ -665,3 +665,20 @@ li {
   }
 }
 
+/* adminTab */
+.tab
+{
+    font-size:20px;
+  color:white;
+  
+}
+.tab:hover
+{
+  color:black;
+}
+
+.tab-menu
+{
+  font-size:15px;
+
+}

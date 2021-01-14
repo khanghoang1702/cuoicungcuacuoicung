@@ -9,8 +9,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import model.Users;
 
 /**
@@ -60,5 +62,104 @@ public class userDB {
         entityManager.merge(user);
         eTrans.commit();
         entityManager.close();
+    }
+
+    public static long accountLogIn(String id, String password) {
+        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = em.createEntityManager();
+        String qString = "SELECT COUNT(u) FROM Users u WHERE u.userNameID = :id AND u.userPassword =:password";
+//        String query="Select * from Users u Where u.userNameID=':admin' AND u.userPassword ='1'";
+        Query q = entityManager.createQuery(qString, long.class);
+//        TypedQuery<int> q = entityManager.createQuery(qString,int.cl);
+        q.setParameter("id", id);
+        q.setParameter("password", password);
+        try {
+//              List<Users> user = (List<Users>)q.getResultList();
+            long user = (long) q.getSingleResult();
+            return user;
+//            int data = q.getFirstResult();
+//            
+//            if (data != 0) {
+//                return data;
+//            } else {
+//                return 0;
+//            }
+
+        } catch (NoResultException e) {
+            return 4;
+        } finally {
+            entityManager.close();
+
+        }
+    }
+
+    public static Users getUserName(String id, String password) {
+        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = em.createEntityManager();
+        String qString = "SELECT u FROM Users u WHERE u.userNameID = :id AND u.userPassword =:password";
+
+        TypedQuery<Users> q = entityManager.createQuery(qString, Users.class);
+        q.setParameter("id", id);
+        q.setParameter("password", password);
+        try {
+            Users user = q.getSingleResult();
+            return user;
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            entityManager.close();
+
+        }
+
+    }
+
+    public static boolean signUpAccount(Users user) {
+        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+//        EntityManager entityManager = em.createEntityManager();
+//        String qString = "INSERT INTO USERS  (userName,userNameID,userPassword,date_created,userEmail,userAddress,userPhone) VALUES (:userName,:userNameID,:userPassword,:date_created,:userEmail,:userAddress,:userPhone) ";
+//
+//        Query q = entityManager.createQuery(qString);
+//        q.setParameter("userName", user.getUserName());
+//        q.setParameter("userNameID", user.getUserID());
+//        q.setParameter("date_created", " ");
+//        q.setParameter("userPassword", user.getUserPassword());
+//        q.setParameter("userEmail", user.getUserEmail());
+//        q.setParameter("userAddress", user.getUserAddress());
+//        q.setParameter("userPhone", user.getUserPhone());
+//
+//        try {
+//            int check = q.executeUpdate();
+//            return check;
+//        } catch (NoResultException e) {
+//            return 0;
+//        } finally {
+//            entityManager.close();
+//
+//        }
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = factory.createEntityManager();
+        EntityTransaction eTrans = entityManager.getTransaction();
+        String userNameID = user.getUserNameID();
+        String qString = "SELECT count(u) FROM Users u WHERE u.userNameID = :id";
+        Query q = entityManager.createQuery(qString, int.class);
+        q.setParameter("id", userNameID);
+            int result =(int)q.getSingleResult();
+            if (result != 0) {
+                return false;
+            } else {
+                try {
+                    eTrans.begin();
+                    entityManager.persist(user);
+                    eTrans.commit();
+                    return true;
+                } catch (NoResultException e) {
+                    return false;
+                } finally {
+                    entityManager.close();
+                }
+            }
+
+     
+
     }
 }

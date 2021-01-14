@@ -4,9 +4,25 @@
         <servlet-name>adminController</servlet-name>
         <servlet-class>.adminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>controllers.Controller</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>formController</servlet-name>
+        <servlet-class>controllers.formController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>adminController</servlet-name>
         <url-pattern>/adminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>formController</servlet-name>
+        <url-pattern>/formController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -14,7 +30,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-
         <welcome-file>homepage.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

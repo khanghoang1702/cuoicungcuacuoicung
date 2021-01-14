@@ -6,7 +6,13 @@
 package dao;
 
 import java.util.List;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import model.Items;
 
@@ -17,15 +23,22 @@ import model.Items;
 public class ItemDB {
 
     public static List<Items> getAllItems() throws Exception {
+        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = em.createEntityManager();
+        String qString = "SELECT item FROM Items item "  ;
+          TypedQuery<Items> q = entityManager.createQuery(qString, Items.class);
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
-        EntityManager entityManager = factory.createEntityManager();
-        String sql = "SELECT item  FROM Items item";
-        Query query = entityManager.createQuery(sql);
-        List<Items> listItems = (List<Items>) query.getResultList();
-        entityManager.close();
+        try {
+            List<Items> listItems = (List<Items>) q.getResultList();
+            return listItems;
 
-        return listItems;
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            entityManager.close();
+
+        }
+
 
     }
 
@@ -59,4 +72,24 @@ public class ItemDB {
         entityManager.close();
     }
 
+    public static List<Items> Search(String itemName) throws Exception {
+
+        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = em.createEntityManager();
+        String qString = "SELECT item FROM Items item WHERE "
+//                + " item.itemName = :itemName"  ;
+                + "item.itemName LIKE"+" CONCAT('%',:itemName,'%') ";
+        TypedQuery<Items> q = entityManager.createQuery(qString, Items.class);
+        q.setParameter("itemName", itemName);
+        try {
+            List<Items> listItems = (List<Items>) q.getResultList();
+            return listItems;
+
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            entityManager.close();
+
+        }
+    }
 }

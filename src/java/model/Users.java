@@ -10,19 +10,25 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author LEQUANGHUY
+ * @author tmh
  */
 @Entity
 @Table(name = "users")
+//@XmlRootElement
 //@NamedQueries({
 //    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u"),
 //    @NamedQuery(name = "Users.findByUserID", query = "SELECT u FROM Users u WHERE u.userID = :userID"),
@@ -31,48 +37,77 @@ import javax.persistence.TemporalType;
 //    @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword"),
 //    @NamedQuery(name = "Users.findByDateCreated", query = "SELECT u FROM Users u WHERE u.dateCreated = :dateCreated"),
 //    @NamedQuery(name = "Users.findByUserEmail", query = "SELECT u FROM Users u WHERE u.userEmail = :userEmail"),
-//    @NamedQuery(name = "Users.findByUserAddress", query = "SELECT u FROM Users u WHERE u.userAddress = :userAddress")})
+//    @NamedQuery(name = "Users.findByUserAddress", query = "SELECT u FROM Users u WHERE u.userAddress = :userAddress"),
+//    @NamedQuery(name = "Users.findByUserPhone", query = "SELECT u FROM Users u WHERE u.userPhone = :userPhone")})
 public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "userID")
-    private String userID;
+    private Integer userID;
+    @Size(max = 20)
     @Column(name = "userName")
     private String userName;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 20)
     @Column(name = "userNameID")
     private String userNameID;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 20)
     @Column(name = "userPassword")
     private String userPassword;
     @Column(name = "date_created")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreated;
+    @Size(max = 254)
     @Column(name = "userEmail")
     private String userEmail;
+    @Size(max = 254)
     @Column(name = "userAddress")
     private String userAddress;
+    @Size(max = 15)
+    @Column(name = "userPhone")
+    private String userPhone;
 
     public Users() {
     }
 
-    public Users(String userID) {
+    public Users(Integer userID) {
         this.userID = userID;
     }
 
-    public Users(String userID, String userNameID, String userPassword) {
+    public Users(Integer userID,String userName, String userNameID, String userPassword,String userEmail,String userAddress,String userPhone) {
+        this.userID = userID;
+        this.userName=userName;
+        this.userNameID = userNameID;
+        this.userPassword = userPassword;
+        this.userEmail=userEmail;
+        this.userAddress=userAddress;
+        this.userPhone=userPhone;
+    }
+  public Users(String userName, String userNameID, String userPassword,String userEmail,String userAddress,String userPhone) {
+        this.userName=userName;
+        this.userNameID = userNameID;
+        this.userPassword = userPassword;
+        this.userEmail=userEmail;
+        this.userAddress=userAddress;
+        this.userPhone=userPhone;
+    }
+    public Users(Integer userID, String userNameID, String userPassword) {
         this.userID = userID;
         this.userNameID = userNameID;
         this.userPassword = userPassword;
     }
 
-    public String getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 
@@ -122,6 +157,14 @@ public class Users implements Serializable {
 
     public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
+    }
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     @Override

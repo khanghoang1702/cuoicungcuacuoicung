@@ -35,4 +35,15 @@ $(window).resize(() => {
 //end item hover
 
 
-
+//adminTab
+function adminTab()
+{
+  var x = document.getElementById("tab");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    console.log("tat");
+  } else {
+    x.style.display = "block";
+    console.log("mo");
+  }
+}
