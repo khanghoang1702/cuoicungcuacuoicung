@@ -3,23 +3,9 @@
   <persistence-unit name="item">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>model.Items</class>
-<<<<<<< HEAD
     <class>model.Accounts</class>
-=======
-  
-    <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/web?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="0937041811Huy"/>
-    </properties>
-  </persistence-unit>
-  
-   <persistence-unit name="user">
-    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
     <class>model.Users</class>
+    <class>model.Feedback</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/web?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

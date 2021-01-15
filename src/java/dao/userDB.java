@@ -114,7 +114,35 @@ public class userDB {
     }
 
     public static boolean signUpAccount(Users user) {
-        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
+
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
+        EntityManager entityManager = factory.createEntityManager();
+        EntityTransaction eTrans = entityManager.getTransaction();
+        String userNameID = user.getUserNameID();
+        String qString = "SELECT COUNT(u) FROM Users u WHERE u.userNameID = :usernameID ";
+        Query q = entityManager.createQuery(qString, long.class);
+        q.setParameter("usernameID",userNameID);
+            long result =(long)q.getSingleResult();
+            if (result != 0) {
+                return false;
+            } else {
+                try {
+                    eTrans.begin();
+                    entityManager.persist(user);
+                    eTrans.commit();
+                    return true;
+                } catch (NoResultException e) {
+                    return false;
+                } finally {
+                    entityManager.close();
+                }
+            }
+
+     
+
+    }
+}
+//        EntityManagerFactory em = Persistence.createEntityManagerFactory("item");
 //        EntityManager entityManager = em.createEntityManager();
 //        String qString = "INSERT INTO USERS  (userName,userNameID,userPassword,date_created,userEmail,userAddress,userPhone) VALUES (:userName,:userNameID,:userPassword,:date_created,:userEmail,:userAddress,:userPhone) ";
 //
@@ -136,30 +164,3 @@ public class userDB {
 //            entityManager.close();
 //
 //        }
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("item");
-        EntityManager entityManager = factory.createEntityManager();
-        EntityTransaction eTrans = entityManager.getTransaction();
-        String userNameID = user.getUserNameID();
-        String qString = "SELECT count(u) FROM Users u WHERE u.userNameID = :id";
-        Query q = entityManager.createQuery(qString, int.class);
-        q.setParameter("id", userNameID);
-            int result =(int)q.getSingleResult();
-            if (result != 0) {
-                return false;
-            } else {
-                try {
-                    eTrans.begin();
-                    entityManager.persist(user);
-                    eTrans.commit();
-                    return true;
-                } catch (NoResultException e) {
-                    return false;
-                } finally {
-                    entityManager.close();
-                }
-            }
-
-     
-
-    }
-}

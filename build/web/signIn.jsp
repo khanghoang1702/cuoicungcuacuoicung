@@ -13,6 +13,11 @@
 
     </head>
     <body>
+           <% String message = (String) session.getAttribute("Message");
+                    if (message == null) {
+                        message = " ";
+                    }
+                %>
         <div class="main">
             <form action="logIn" class="form" id="form-signIn">
                 <div class= "logo">
@@ -52,8 +57,10 @@
                         <input type="checkbox" name="" id="rememberPW">
                         <label for="rememberPW">Remember Password</label>
                     </div>
-                </div>
+                                    <p style="color:red"> <%=message%> </p>
 
+                </div>
+             
                 <input type="submit" class="btn-submit"></input>
             </form>
         </div>

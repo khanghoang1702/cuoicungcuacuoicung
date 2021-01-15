@@ -6,16 +6,20 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -32,6 +36,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 //    @NamedQuery(name = "Items.findByItemImageData", query = "SELECT i FROM Items i WHERE i.itemImageData = :itemImageData"),
 //    @NamedQuery(name = "Items.findByItemImageName", query = "SELECT i FROM Items i WHERE i.itemImageName = :itemImageName")})
 public class Items implements Serializable {
+
+    @OneToMany(mappedBy = "itemID")
+    private Collection<Feedback> feedbackCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -65,6 +72,15 @@ public class Items implements Serializable {
 
     public Items(String itemID) {
         this.itemID = itemID;
+    }
+
+    public static Items lookUp(List<Items> listItems, String code) {
+        for (Items item : listItems) {
+            if (code.equals(item.getItemID())) {
+                return item;
+            }
+        }
+        return null;
     }
 
     public Items(String itemID, String itemName, double itemPrice, String itemImageData, String itemImageName) {
@@ -139,5 +155,14 @@ public class Items implements Serializable {
     public String toString() {
         return "model.Items[ itemID=" + itemID + " ]";
     }
-    
+
+    @XmlTransient
+    public Collection<Feedback> getFeedbackCollection() {
+        return feedbackCollection;
+    }
+
+    public void setFeedbackCollection(Collection<Feedback> feedbackCollection) {
+        this.feedbackCollection = feedbackCollection;
+    }
+
 }

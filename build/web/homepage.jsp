@@ -90,7 +90,7 @@ and open the template in the editor.
                         </a>
 
                     </li>
-                  
+
                     <li class="nav-item">
                         <a class="nav-link" id="navlink2" href="#aquaknow">AQUATIC KNOWLEDGE</a>
                     </li>
@@ -101,41 +101,45 @@ and open the template in the editor.
                 </ul>
 
 
-                <% Users user = new Users();
-                    if ((Users) session.getAttribute("User") != null) {
-//                        user.setUserName("hoang");
+                <%
+                    Users user = (Users) session.getAttribute("User");
+
+                    if (user == null) {
+                        user = new Users();
+
+                        user.setUserName(" ");
 //                        user.setUserID("003");
 //                        user.setUserNameID("hoang");
 //                        user.setUserPassword("1");
-                        user = (Users) session.getAttribute("User");
                     }
-                    else
-                    {
-                        user.setUserName(" ");
-                    }
+
                 %>
                 <div class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle tab" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-id-badge"></i>  <%=user.getUserName() %>
+                        <i class="fas fa-id-badge"></i>  <%=user.getUserName()%>
                     </a>
                     <div class="dropdown-menu tab-menu" aria-labelledby="navbarDropdown">
                         <p class="dropdown-item" href="#"><i class="fas fa-shopping-cart"></i> My Cart 
-                        
                         </p>
                         <p class="dropdown-item" href="#"><i class="fas fa-user"></i>  Type: <% if ("admin".equals(user.getUserNameID())) { %>
                             Admin
                             <% } else { %>
                             User <% } %>
                         </p>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><% if("admin".equals(user.getUserNameID())) { %>
-                            Admin Page <% } %>
+                        <div  class="dropdown-divider tab-divide"></div>
+                        <a class="dropdown-item" href="#"><% if ("admin".equals(user.getUserNameID())) { %>
+                            <i class="fas fa-users-cog"></i>  Admin Page <% } %>
                         </a>
+                        <% if ((Users) session.getAttribute("User") != null) {%>
+
+                        <a  href="/webproject/logOut" class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                        <% } %>
+
                     </div>
                 </div>
 
 
-                <form action="Controller" class="form-inline searchbar my-2 my-lg-0 mr-2">
+                <form action="Search" class="form-inline searchbar my-2 my-lg-0 mr-2">
 
                     <input name="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
                            aria-label="Search" />
@@ -328,21 +332,16 @@ and open the template in the editor.
                     </div>
                 </div>
                 <!-- End Filter mobile -->
-<<<<<<< HEAD
                 <% List<Items> listItems = (List<Items>) session.getAttribute("listItems");
                     if (listItems == null) {
                         listItems = ItemDB.getAllItems();
+                        session.setAttribute("listItems", listItems);
                     }
 
-=======
-                <%
-                    List<Items> listItems = ItemDB.getAllItems();
-                    session.setAttribute("listItems", listItems);
->>>>>>> 2a01bee236d1a218b26aadb2a1529f3301e62ac0
                 %>
                 <div class="items-container">
                     <% for (Items item : listItems) {%>
-                    <div class="items">
+                    <a style="display:block" href="/webproject/Product?product=<%=item.getItemID() %>" class="items">
                         <img src="<%= item.getItemImageData()%>" alt="Fish here">
                         <div class="btnitem">
                             <h1>
@@ -365,7 +364,7 @@ and open the template in the editor.
                         </div>
 
 
-                    </div>
+                    </a>
 
                     <% }%>
                 </div>

@@ -6,6 +6,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -15,12 +16,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -28,18 +31,21 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "users")
-//@XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u"),
-//    @NamedQuery(name = "Users.findByUserID", query = "SELECT u FROM Users u WHERE u.userID = :userID"),
-//    @NamedQuery(name = "Users.findByUserName", query = "SELECT u FROM Users u WHERE u.userName = :userName"),
-//    @NamedQuery(name = "Users.findByUserNameID", query = "SELECT u FROM Users u WHERE u.userNameID = :userNameID"),
-//    @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword"),
-//    @NamedQuery(name = "Users.findByDateCreated", query = "SELECT u FROM Users u WHERE u.dateCreated = :dateCreated"),
-//    @NamedQuery(name = "Users.findByUserEmail", query = "SELECT u FROM Users u WHERE u.userEmail = :userEmail"),
-//    @NamedQuery(name = "Users.findByUserAddress", query = "SELECT u FROM Users u WHERE u.userAddress = :userAddress"),
-//    @NamedQuery(name = "Users.findByUserPhone", query = "SELECT u FROM Users u WHERE u.userPhone = :userPhone")})
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u"),
+    @NamedQuery(name = "Users.findByUserID", query = "SELECT u FROM Users u WHERE u.userID = :userID"),
+    @NamedQuery(name = "Users.findByUserName", query = "SELECT u FROM Users u WHERE u.userName = :userName"),
+    @NamedQuery(name = "Users.findByUserNameID", query = "SELECT u FROM Users u WHERE u.userNameID = :userNameID"),
+    @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword"),
+    @NamedQuery(name = "Users.findByDateCreated", query = "SELECT u FROM Users u WHERE u.dateCreated = :dateCreated"),
+    @NamedQuery(name = "Users.findByUserEmail", query = "SELECT u FROM Users u WHERE u.userEmail = :userEmail"),
+    @NamedQuery(name = "Users.findByUserAddress", query = "SELECT u FROM Users u WHERE u.userAddress = :userAddress"),
+    @NamedQuery(name = "Users.findByUserPhone", query = "SELECT u FROM Users u WHERE u.userPhone = :userPhone")})
 public class Users implements Serializable {
+
+    @OneToMany(mappedBy = "userID")
+    private Collection<Feedback> feedbackCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -80,29 +86,20 @@ public class Users implements Serializable {
         this.userID = userID;
     }
 
-    public Users(Integer userID,String userName, String userNameID, String userPassword,String userEmail,String userAddress,String userPhone) {
-        this.userID = userID;
-        this.userName=userName;
-        this.userNameID = userNameID;
-        this.userPassword = userPassword;
-        this.userEmail=userEmail;
-        this.userAddress=userAddress;
-        this.userPhone=userPhone;
-    }
-  public Users(String userName, String userNameID, String userPassword,String userEmail,String userAddress,String userPhone) {
-        this.userName=userName;
-        this.userNameID = userNameID;
-        this.userPassword = userPassword;
-        this.userEmail=userEmail;
-        this.userAddress=userAddress;
-        this.userPhone=userPhone;
-    }
     public Users(Integer userID, String userNameID, String userPassword) {
         this.userID = userID;
         this.userNameID = userNameID;
         this.userPassword = userPassword;
     }
-
+ public Users(Integer userID,String userName, String userNameID, String userPassword,String userEmail,String userAddress,String userPhone) {
+        this.userID = userID;
+        this.userName=userName;
+        this.userNameID = userNameID;
+        this.userPassword = userPassword;
+        this.userEmail=userEmail;
+        this.userAddress=userAddress;
+        this.userPhone=userPhone;
+    }
     public Integer getUserID() {
         return userID;
     }
@@ -192,4 +189,13 @@ public class Users implements Serializable {
         return "model.Users[ userID=" + userID + " ]";
     }
 
+    @XmlTransient
+    public Collection<Feedback> getFeedbackCollection() {
+        return feedbackCollection;
+    }
+
+    public void setFeedbackCollection(Collection<Feedback> feedbackCollection) {
+        this.feedbackCollection = feedbackCollection;
+    }
+    
 }

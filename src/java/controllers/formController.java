@@ -21,7 +21,7 @@ import model.Users;
  *
  * @author tmh
  */
-@WebServlet(urlPatterns = {"/logIn", "/Register"})
+@WebServlet(urlPatterns = {"/logIn", "/Register", "/logOut"})
 public class formController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -36,11 +36,21 @@ public class formController extends HttpServlet {
                 case "/Register":
                     Register(request, response);
                     break;
+                case "/logOut":
+                    logOut(request, response);
+                    break;
                 default:
                     break;
             }
 
         }
+    }
+
+    protected void logOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.setAttribute("User", null);
+        response.sendRedirect("homepage.jsp");
+
     }
 
     protected void logIn(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,32 +60,35 @@ public class formController extends HttpServlet {
         String id = request.getParameter("nameId");
         Users user = userDB.getUserName(id, password);
         if (user == null) {
-            String inputError = "Input incorrect, please try again";
-            session.setAttribute("inputError", inputError);
+            String message = "Input incorrect, please try again";
+            session.setAttribute("Message", message);
+            response.sendRedirect("signIn.jsp");
+
+        } else {
+            session.setAttribute("User", user);
+            response.sendRedirect("homepage.jsp");
         }
-        session.setAttribute("User", user);
-        response.sendRedirect("homepage.jsp");
 
     }
 
     protected void Register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        String fullName = request.getParameter("fullname");
-        String nameId = request.getParameter("id");
-        String password = request.getParameter("password");
-        String address = request.getParameter("address");
-        String email = request.getParameter("email");
-        String phoneNumber = request.getParameter("phone");
+        String userName = request.getParameter("fullname");
+        String userNameID = request.getParameter("id");
+        String userPassword = request.getParameter("password");
+        String userAddress = request.getParameter("address");
+        String userEmail = request.getParameter("email");
+        String userPhone = request.getParameter("phone");
 
-        Users user = new Users(fullName, nameId, password, email, address, phoneNumber);
+        Users user = new Users(1, userName, userNameID, userPassword, userEmail, userAddress, userPhone);
         boolean check = userDB.signUpAccount(user);
         if (check) {
-            session.setAttribute("Message", "Register successully ");
+//            session.setAttribute("Message", "Register successully ");
             response.sendRedirect("signIn.jsp");
         } else {
-            session.setAttribute("Message", "Register unsuccessully ");
-             response.sendRedirect("signUp.jsp");
+            session.setAttribute("Message", "ID already exist");
+            response.sendRedirect("signUp.jsp");
 
         }
     }
